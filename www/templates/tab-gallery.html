@@ -1,0 +1,11 @@
+<ion-view view-title="Galerie">
+   <ion-content>
+    <ion-list>
+      <ion-item  ng-repeat="photo in photos" type="item-text-wrap" >
+      
+        <img class="gallery" width="100%" ng-src="{{photo.photo}}">
+    
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
