@@ -156,8 +156,27 @@ Home.News().then(function (resp) {
 
 .controller('HealthCtrl', function($scope) {})
 
-.controller('GalleryCtrl', ['$scope','$http','$localstorage','$timeout','Home', function ($scope,$http,$localstorage,$timeout,Home) {
+.controller('GalleryCtrl', function ($scope,$http,$localstorage,$timeout,Home,$cordovaCamera) {
 
+  $scope.takePicture = function() {
+    var options = {
+      quality: 75, // Qualité de l'image sauvée, valeur entre 0 et 100
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.CAMERA,
+      allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG, // Format d'encodage : JPEG ou PNG
+      targetWidth: 300, // Largeur de l'image en pixel
+      targetHeight: 300, // Hauteur de l'image en pixel
+      saveToPhotoAlbum: false // Enregistrer l'image dans l'album photo du device
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+      $scope.imgURI = "data:image/jpeg;base64," + imageData;
+    }, function(err) {
+      console.log(err);
+    });
+  };
+  
   Home.Gallery().then(function (resp) {
            // Here will be the data after the request finished
            var galerie = resp.data;
@@ -168,8 +187,9 @@ Home.News().then(function (resp) {
           console.error('ERR', err);
    });
 //$timeout($scope.photos = $localstorage.getObject('photos'),1);
-
-}])
+  
+  
+})
 
 .controller('CompteCtrl',['$scope','$rootScope','$state','$stateParams','Compte','$ionicPopup', function($scope, $rootScope, $state, $stateParams,Compte,$ionicPopup) {
   $scope.connexion = function(user){

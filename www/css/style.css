@@ -39,6 +39,10 @@ color : #ff5e3a;
     line-height: 5px !important;
     min-height: 50px !important;
 }
+#headbar {
+  color:white;
+}
+
 /*.myslide{ position: fixed;}*/
 .custom-item{
   background-color: #dbddde;
