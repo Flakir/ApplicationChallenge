@@ -270,7 +270,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
         controller: 'StandsCtrl'
       }
     }
-  });
+  })
+    .state('tab.espaceperso', {
+      url: '/espaceperso',
+      views: {
+        'tab-espaceperso':{
+          templateUrl: 'templates/tab-espaceperso.html',
+          controller: 'EspacePersoCtrl'
+        }
+      }
+    });
 
 
 

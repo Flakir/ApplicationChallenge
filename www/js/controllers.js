@@ -422,4 +422,7 @@ Informations.FAQ().then(function (resp) {
 })
 
 .controller('StandsCtrl', function($scope) {
+})
+
+.controller('EspacePersoCtrl',function($scope) {
 });
