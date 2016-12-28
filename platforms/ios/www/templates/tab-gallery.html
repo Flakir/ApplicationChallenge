@@ -1,0 +1,14 @@
+<ion-view view-title="Galerie">
+   <ion-content>
+   	<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+    <button class="button icon-left ion-camera" ng-click="takePicture()">Prendre une photo</button>
+    <ion-list>
+      <ion-item  ng-repeat="photo in photos" type="item-text-wrap" >
+      
+        <img class="gallery" width="100%" ng-src="{{photo.photo}}">
+    
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
