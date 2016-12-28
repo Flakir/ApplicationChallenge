@@ -1,0 +1,15 @@
+
+      <div class="modal" ng-controller="ModalCtrl">
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Selectionner une Ecole</h1>
+          <button class="button button-clear button-primary" ng-click="hideModal()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <ion-radio ng-model="modalData.msg" ng-repeat="item in ecoles" ng-change="doSomething(item)">
+              {{item.nom_ecole}}
+            </ion-radio>
+          </div>
+        </ion-content>
+      </div>
+    </script>
