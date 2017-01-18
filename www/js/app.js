@@ -168,6 +168,41 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     }
   })
 
+
+  .state('tab.poulefootm', {
+    cache: true,
+    url: '/poulefootm',
+    views: {
+      'tab-matchs': {
+        templateUrl: 'templates/tab-poulefootm.html',
+        controller: 'pouleCtrl'
+      }
+    }
+  })
+
+  .state('tab.pouleAfootm', {
+    cache: true,
+    url: '/pouleAfootm',
+    views: {
+      'tab-matchs': {
+        templateUrl: 'templates/tab-pouleAfootm.html',
+        controller: 'pouleCtrl'
+      }
+    }
+  })
+
+
+  .state('tab.poulefootf', {
+    cache: true,
+    url: '/poulefootf',
+    views: {
+      'tab-matchs': {
+        templateUrl: 'templates/tab-poulefootf.html',
+        controller: 'pouleCtrl'
+      }
+    }
+  })
+
   // Début Code de Thomas: 09/12
  
   .state('tab.calendrier', {

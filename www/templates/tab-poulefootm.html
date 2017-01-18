@@ -1,0 +1,21 @@
+<ion-view view-title="Football Masculin">
+  <ion-content class="padding">
+    <h4>Choisissez une poule</h4>
+    <ion-list>
+    <div ng-controller="pouleCtrl">
+       
+
+      <ion-item ng-repeat="poule in poulesfootm" class="item-icon-right" href="#/tab/{{poule.match}}">
+      
+        <i class="icon {{poule.icon}}"></i>
+        
+        
+          {{poule.title}}
+        </a>  
+    </div>
+          
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+</ion-view>

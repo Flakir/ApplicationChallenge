@@ -1,9 +1,9 @@
 /* Empty. Add your own CSS if you like */
 .background{
-  /*background: radial-gradient(#183d8f,#d1793a);*/
+  /*background: radial-gradient(#0032a0,#0032a0);*/
 }
 .custom-icon {
-    color : #ff5e3a;
+    color : #0032a0;
 }
 .custom-button{
   background-color: #fff;
@@ -14,7 +14,7 @@
 }
 .mini_titre{
 text-align: center;
-color : #ff5e3a;
+color : #0032a0;
 }
 
 @font-face {
@@ -30,8 +30,8 @@ color : #ff5e3a;
 
 
 .custom-bar{
-  border-color: #ff5e3a;
-    background-color: #ff5e3a;
+  border-color: #ff9600;
+    background-color: #ff9600;
     color: #fff;
     font-family: 'Agency FB';
 }
@@ -39,10 +39,6 @@ color : #ff5e3a;
     line-height: 5px !important;
     min-height: 50px !important;
 }
-#headbar {
-  color:white;
-}
-
 /*.myslide{ position: fixed;}*/
 .custom-item{
   background-color: #dbddde;
@@ -92,7 +88,7 @@ select {
 }
 
 .choix_sport {
-  color: #ff5e3a;
+  color: #ff9600;
 
 }
 

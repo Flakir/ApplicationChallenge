@@ -1,5 +1,110 @@
 angular.module('starter.controllers', ['ionic', 'ionic-modal-select'])
 
+.controller('DashCtrl', function($scope) {  
+
+  $scope.sports = [
+
+    { id: 1, title: 'Football Masculin', icon: 'ion-ios-football' , poule:'poulefootm'},
+
+    { id: 2, title: 'Football Féminin', icon: 'ion-ios-football',poule:'poulefootf'},
+
+    { id: 3, title: 'Rugby Masculin', icon:'ion-ios-americanfootball-outline',poule:'poulerugbym'},
+
+    { id: 4, title: 'Rugby Féminin', icon:'ion-ios-americanfootball-outline',poule:'poulerugbyf'},
+
+    { id: 5, title: 'Tennis Masculin', icon:'ion-ios-tennisball',poule:'pouletennism'},
+
+    { id: 6, title: 'Tennis Féminin', icon:'ion-ios-tennisball',poule:'pouletennisf'},
+
+    { id: 7, title: 'Basketball Masculin', icon:'ion-ios-basketball',poule:'poulebasketm'},
+
+    { id: 8, title: 'Basketball Féminin',icon:'ion-ios-basketball',poule:'poulebasketf'},
+
+    { id: 9, title: 'Handball Masculin', icon: 'ion-ios-football-outline',poule:'poulehandm'},
+
+    { id: 10, title: 'Handball Féminin', icon: 'ion-ios-football-outline',poule:'poulehandf'},
+
+    { id: 11, title: 'Volley Masculin'},
+
+    { id: 12, title: 'Volley Féminin'},
+
+    { id: 13, title: 'Tennis de table Masculin'},
+
+    { id: 14, title: 'Tennis de table Féminin'},
+
+    { id: 15, title: 'Ski Masculin'},
+
+    { id: 16, title: 'Ski Féminin'},
+
+    { id: 17, title: 'Judo Masculin'},
+
+    { id: 18, title: 'Judo Féminin'},
+
+    { id: 19, title: 'Badminton Masculin'},
+
+    { id: 20, title: 'Badminton Féminin'},
+
+    { id: 21, title: 'Ski Masculin'},
+
+    { id: 22, title: 'Judo Masculin'},
+
+    { id: 23, title: 'Escrime Masculin'},
+
+    { id: 24, title: 'Escrime Féminin'},
+
+    { id: 25, title: 'Athlétisme Masculin', icon:'ion-android-walk'},
+
+    { id: 26, title: 'Athlétisme Féminin', icon:'ion-android-walk'},
+
+    { id: 27, title: 'Golf'},
+
+    { id: 28, title: 'Raid', icon: 'ion-android-bicycle'},
+
+    { id: 29, title: 'Escalade Masculin'},
+
+    { id: 30, title: 'Escalade Féminin'},
+
+    { id: 31, title: 'Water-Polo Masculin'},
+
+    { id: 32, title: 'Water-Polo Féminin'},
+
+    { id: 33, title: 'Ultimate Masculin'},
+
+    { id: 34, title: 'Utimate Féminin'},
+
+
+  ];
+
+})
+
+
+.controller('pouleCtrl', function($scope){
+    $scope.poulesfootm = [
+
+      { id: 1, title: 'poule A', icon: 'ion-ios-football', match:'pouleAfootm'},
+
+      { id: 2, title: 'poule B', icon: 'ion-ios-football',match:'pouleBfootm'},
+
+      { id: 3, title: 'poule C', icon:'ion-ios-football',match:'pouleBfootm'},
+
+      { id: 4, title: 'Phases finales', icon:'ion-ios-football-outline',match:'phasesfinalesfootm'},
+
+    
+  ];
+
+    $scope.poulesfootf = [
+
+      { id: 1, title: 'poule féminine A', icon: 'ion-ios-football'},
+
+      { id: 2, title: 'poule féminine B', icon: 'ion-ios-football'},
+
+      { id: 3, title: 'poule féminine C', icon:'ion-ios-football'},
+
+      { id: 4, title: 'Phases finales', icon:'ion-ios-football-outline'},
+
+
+    ];
+})
 .controller('AccueilCtrl',['$scope','$ionicSlideBoxDelegate','$http','$localstorage','$timeout','Home', function($scope,$ionicSlideBoxDelegate,$http,$localstorage,$timeout,Home) {
 
     /* la fonction associée au slider de la page d'accueil*/
