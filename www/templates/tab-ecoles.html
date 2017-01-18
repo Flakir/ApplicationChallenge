@@ -1,18 +1,12 @@
 <ion-view view-title="Ecoles">
   <ion-content class="padding" style="text-align:center">
     <div class="background">
-  <div class="corpsinfo">
-  <div class="list card">
-      <div class="item item-divider custom-item"><div class="titreinfo"> Classement</div> </div>
-      <div class="item item-body">
-        <ul>
-          <li ng-repeat="ecole in classement | limitTo:3"> <img width="30" ng-src="{{ecole.logo_ecole}}"> </br> {{$index+1}}.  {{ecole.nom_ecole}} </li>
-        </ul>
-        <a href="#/tab/classement"><button class='button button-clear button-positive icon ion-plus custom-button'></button></a>
-      </div>
-    </div>
+
+
     <div class="list card titreinfo">
-      <div class="item item-divider custom-item"><div class="titreinfo">Informations sur une école</div></div>
+      <div class="item item-divider custom-item"><div class="titreinfo">Sélectionner une école</div></div>
+
+
     </br>
           <div class="">
            <!--div class="buttons">
@@ -28,15 +22,21 @@
                 <option  ng-repeat="ecole in ecoles | orderBy: 'nom_ecole'" value="{{ecole.abreviation}}"> {{ecole.nom_ecole}} </option>
                </select>
           </br>
+
+
             <button class="button button-clear button-positive" ng-click="getInfoEcole(Infoecole)">Rechercher</button><br>
           </form>          
        </div>
       </div>
+
+
       <div ng-if="matchs_ecole">
        <div class="row">
           <div class="col"><img width="30" ng-src="{{matchs_ecole.logo_ecole}}"></div>
           <div class="col">{{matchs_ecole.nom_ecole}}</div>
           <div class="col">{{matchs_ecole.points}} pts</div>
+
+
         </div>
         <div class="item item-divider"><div class="titreinfo">Matchs à venir</div></div>
 
@@ -72,7 +72,28 @@
         </div>
     </div>
   </div>
+
+  <div class="corpsinfo">
+  <div class="list_card">
+
+
+      <div class="item item-divider custom-item">
+      <div class="titreinfo"> Classement </div>
+      </div>
+
+      <div class="item item-body">
+
+        <ul>
+          <li ng-repeat="ecole in classement"> <img width="30" ng-src="{{ecole.logo_ecole}}"> </br> {{$index+1}}.  {{ecole.nom_ecole}} </li>
+        </ul>
+
+        
+      </div>
+    </div>
+
+
   </div>
+
 </br>
 </br>
 

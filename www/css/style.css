@@ -54,7 +54,7 @@ color : #0032a0;
 .scroll { height: 50% }
 
 .barre {
-  color: #dbddde;
+  color: #0032a0;
 
 }
 
@@ -181,7 +181,19 @@ select::-ms-expand {
 
 
 
+.custom-item.item-divider {
+  background-color: #0032a0;
+  color: white;
+  
+  
+}
 
+
+.item-divider.item {
+  background-color: #0032a0;
+  color: white;
+  
+}
 
 
 

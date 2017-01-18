@@ -81,11 +81,11 @@ angular.module('starter.controllers', ['ionic', 'ionic-modal-select'])
 .controller('pouleCtrl', function($scope){
     $scope.poulesfootm = [
 
-      { id: 1, title: 'poule A', icon: 'ion-ios-football', match:'pouleAfootm'},
+      { id: 1, title: 'Poule A', icon: 'ion-ios-football', match:'pouleAfootm'},
 
-      { id: 2, title: 'poule B', icon: 'ion-ios-football',match:'pouleBfootm'},
+      { id: 2, title: 'Poule B', icon: 'ion-ios-football',match:'pouleBfootm'},
 
-      { id: 3, title: 'poule C', icon:'ion-ios-football',match:'pouleBfootm'},
+      { id: 3, title: 'Poule C', icon:'ion-ios-football',match:'pouleBfootm'},
 
       { id: 4, title: 'Phases finales', icon:'ion-ios-football-outline',match:'phasesfinalesfootm'},
 
