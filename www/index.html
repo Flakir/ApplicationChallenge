@@ -31,14 +31,21 @@
       The nav bar that will be updated as we navigate between views.
     -->
     <ion-nav-bar class="bar bar-header custom-bar titreinfo" align-title="center">
-      <ion-nav-back-button class="button-clear" id="headbar">
+      <ion-nav-back-button class="button-clear" style="color:white" id="headbar">
       </ion-nav-back-button>
       <ion-nav-buttons side="right">
         <button class="button button-clear custom-bar" ng-click="admin()" id="headbar">
           <a class="icon ion-ios-camera"> </a>
         </button>
       </ion-nav-buttons>
+       <ion-nav-buttons side="left">
+        <button class="button button-clear custom-bar" ng-click="admin()" id="headbar">
+          <a class="icon ion-qr-scanner"> </a>
+        </button>
+      </ion-nav-buttons>
     </ion-nav-bar>
+
+
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also

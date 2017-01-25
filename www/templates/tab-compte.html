@@ -2,13 +2,15 @@
   <ion-content padding="true">
 	<div class="background">
 	<div class="corpsinfo">
+
+    <div ng-if="creation != true">
     <div class="list card">
-      <div class="item item-divider" style="text-align:center"><div class="titreinfo">Espace Perso</div></div>
+      <div class="item item-divider" style="text-align:center"><div class="titreinfo">Mon Compte</div></div>
       <div class="item item-body">
         <div>
           <form name="form">
             <label class="item item-input">
-            <span class="input-label">Login :</span>
+            <span class="input-label">Pseudo :</span>
             <input type="text" ng-model="user.login" required>
             </label>
             <label class="item item-input">
@@ -16,12 +18,20 @@
             <input type="password" ng-model="user.mdp" required>
             </label>
               <button class="button button-block button-stable" type="submit" ng-click="connexion(user)" ng-disabled="form.$invalid">Connexion</button>
+
             <div ng-if="connected">
               <button class="button button-block button-stable" type="submit" ng-click="deconnexion()">Déconnexion</button>
             </div>
+
           </form>
         </div>
       </div>
+
+
+
+
+
+
       <div ng-if="connected">
        <div class="item item-divider" style="text-align:center"><div class="titreinfo">Connecté en tant que :</div></div>
        <div class="item item-body">
@@ -38,10 +48,51 @@
          </div>
        </div>
       </div>
-    </div>    
+    </div>  
+
+
+    <div class="list card">
+      <div class="item item-divider" style="text-align:center"><div class="titreinfo">Pas encore de compte ?</div></div>
+      <div class="item item-body">
+      <button class="button button-block button-stable" style="" type="submit" ng-click="creercompte()">Créer un compte</button>
+      <button class="button button-block  icon-left ion-social-googleplus button-calm" style="background-color: #dd4b39">Se connecter avec Google</button>
+      <button class="button button-block icon-left ion-social-facebook button-calm" style="background-color: #3B5998">Se connecter avec Facebook</button>
+      </div>
+    </div>
+    </div>
+
+  
+  <div ng-if="creation">
+
+  <div class="list card">
+  <div class="item item-divider" style="text-align:center"><div class="titreinfo">Créer votre compte</div></div>
+      <div class="item item-body">
+        <form name="form">
+            <label class="item item-input">
+            <span class="input-label">Pseudo :</span>
+            <input type="text" ng-model="user.login" required>
+            </label>
+            <label class="item item-input">
+            <span class="input-label">Mot de passe :</span>
+            <input type="password" ng-model="user.mdp" required>
+            </label>
+            <label class="item item-input">
+            <span class="input-label">Adresse e-mail:</span>
+            <input type="text" ng-model="user.login" required>
+            </label>
+              <button class="button button-block button-stable" type="submit" ng-click="connexion(user)" ng-disabled="form.$invalid">Création</button>
+              </form>
+      </div>
+  </div>
+
+  </div>
+
+
+
+  </div>
   </div>
 </div>
-   <br>
- </br>
+</div>
+   
 </ion-content>
 </ion-view>

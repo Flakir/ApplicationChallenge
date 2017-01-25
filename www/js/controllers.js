@@ -320,6 +320,15 @@ Home.News().then(function (resp) {
    });
       
    }
+
+
+  $scope.creercompte = function(){
+    // console.log("test");
+    $rootScope.creation = true;
+
+  }
+
+
   $scope.deconnexion = function(){
       $rootScope.connected=null;
    }
